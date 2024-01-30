@@ -103,3 +103,16 @@ body {
   background:#02aac0 ;
   color: #630092;
 }
+.button3 {
+  height: 40px;
+  width: 150px;
+  border: 2px solid #02aac0;
+  border-radius: 15px;
+  margin-top: 20px;
+  background: white;
+  text-align: center; 
+  display: block;
+  margin: 20px auto;
+  margin-left: 880px;
+
+}

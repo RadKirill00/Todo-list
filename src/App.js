@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Input from "./components/Input";
 import Task from "./components/Task";
-import "./index.css"
+import "./index.css";
 
 function App() {
   const [todo, setTodo] = useState("");
@@ -42,15 +42,26 @@ function App() {
     />
   ));
 
+  function deleteCompletedTasks() {
+    let del = tasks.filter((e) => !e.status);
+    setTasks(del);
+  }
+
   return (
     <div className="App">
       <Header />
-      <Input addTask={addTask} setTodo={setTodo} todo={todo} className="input" />
+      <Input
+        addTask={addTask}
+        setTodo={setTodo}
+        todo={todo}
+        className="input"
+      />
+      <button onClick={deleteCompletedTasks} className="button3">
+        Удалить выполненные
+      </button>
       <div className="taskTodoList1">{taskTodoList}</div>
     </div>
   );
 }
 
 export default App;
-
-
