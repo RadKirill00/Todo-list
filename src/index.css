@@ -116,3 +116,7 @@ body {
   margin-left: 880px;
 
 }
+
+.button3:active {
+  border: 2px solid #630092;
+}
